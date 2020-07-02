@@ -5,9 +5,18 @@ class StartPage
 {
     // include url of current page
     public static $URL = '/';
+
     public static $headerElement = 'header#header';
     public static $footerElement = 'footer#footer';
 
+    public static $addsOfTheWeekElement = 'div#bargainItems';
+    public static $addsOfTheWeekElements = 'div#bargainItems > div.newItems > div.productBox';
+
+    public static $newArrivedElement = 'div#newItems';
+    public static $newArrivedElements = 'div#newItems div.productBox';
+
+    public static $topSellerElement = 'div#topBox';
+    public static $topSellerElements = 'div#topBox > div.newItems > div.productBox';
 
     /**
      * Declare UI map for this page here. CSS or XPath allowed.

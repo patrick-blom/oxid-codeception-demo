@@ -6,7 +6,7 @@ namespace StartPage;
 use AcceptanceTester;
 use Page\Acceptance\StartPage;
 
-class HeaderCest
+class TopsellerCest
 {
     /**
      * @param AcceptanceTester $I
@@ -24,8 +24,11 @@ class HeaderCest
      * @param AcceptanceTester $I
      * @param StartPage $page
      */
-    public function testHeaderWillBeDisplayed(AcceptanceTester $I, StartPage $page)
+    public function topSellerWillBeShown(AcceptanceTester $I, StartPage $page)
     {
-        $I->seeElement($page::$headerElement);
+        $I->see('Topseller');
+        $I->seeElement($page::$topSellerElement);
+        $elements = $I->grabMultiple($page::$topSellerElements);
+        $I->assertCount(2, $elements);
     }
 }

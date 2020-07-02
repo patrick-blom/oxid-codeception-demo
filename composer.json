@@ -29,4 +29,4 @@
     "codeception/module-asserts": "^1.2",
     "codeception/module-phpbrowser": "^1.0.0"
   }
-},
+}

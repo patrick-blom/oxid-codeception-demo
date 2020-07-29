@@ -1,0 +1,5 @@
+input suche => #searchParam
+form name="search" => Button submit
+div class => "page-header"
+div class => "listDetails" => a class => "title"
+searchparam=Jeans

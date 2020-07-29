@@ -4,7 +4,7 @@ namespace Category;
 
 
 use AcceptanceTester;
-use Page\Acceptance\Category;
+use Page\Acceptance\CategoryPage;
 
 class ProductListCest
 {
@@ -14,7 +14,7 @@ class ProductListCest
      *
      * @throws \Exception
      */
-    public function _before(AcceptanceTester $I, Category $page)
+    public function _before(AcceptanceTester $I, CategoryPage $page)
     {
         $I->amOnPage($page::$URL);
         $I->waitForElement($page::$paginationElement);
@@ -24,7 +24,7 @@ class ProductListCest
      * @param AcceptanceTester $I
      * @param Category $page
      */
-    public function PaginationWillBeShown(AcceptanceTester $I, Category $page)
+    public function PaginationWillBeShown(AcceptanceTester $I, CategoryPage $page)
     {
         $I->see('Kites');
         $I->seeElement($page::$paginationElement);
@@ -34,7 +34,7 @@ class ProductListCest
      * @param AcceptanceTester $I
      * @param Category $page
      */
-    public function FilterOptionsWillBeShown(AcceptanceTester $I, Category $page)
+    public function FilterOptionsWillBeShown(AcceptanceTester $I, CategoryPage $page)
     {
         $I->seeElement($page::$filterElement);
     }
@@ -43,7 +43,7 @@ class ProductListCest
      * @param AcceptanceTester $I
      * @param Category $page
      */
-    public function ProductListContainsAllElements(AcceptanceTester $I, Category $page)
+    public function ProductListContainsAllElements(AcceptanceTester $I, CategoryPage $page)
     {
         $elements = $I->grabMultiple($page::$productListBoxes);
         $I->assertCount(10, $elements);

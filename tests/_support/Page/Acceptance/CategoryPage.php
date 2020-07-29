@@ -2,7 +2,7 @@
 
 namespace Page\Acceptance;
 
-class Category
+class CategoryPage
 {
     // include url of current page
     public static $URL = '/Kiteboarding/Kites/';
